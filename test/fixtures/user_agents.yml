@@ -31,7 +31,9 @@ browsers:
 - nickname: yahoobot
   ua: "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)"
   name:
-    - yahoobot
+    - yahoo
+    - slurp
+    - robot
     - robots
 
 - nickname: "iphone 3"
