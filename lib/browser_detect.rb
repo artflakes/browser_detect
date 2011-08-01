@@ -11,6 +11,8 @@ module BrowserDetect
                includes?(/msie \d/) and not includes?('opera') and not includes?('webtv')
              when 'mozilla'
                includes?('gecko') || includes?('mozilla')
+             when 'safari'
+               includes?('safari') and not includes?('chrome')
              when 'webkit'
                includes?(/webkit|safari|chrome|iphone|ipad|ipod/)
              when 'ios'

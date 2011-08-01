@@ -39,6 +39,16 @@ class BrowserDetectTest < Test::Unit::TestCase
     assert(mock.browser_is?('googlebot'))
   end
 
+  must "identify Safari" do
+    mock = mock_browser("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50")
+    assert(mock.browser_is?('safari'))
+  end
+
+  must "not identify Chrome as Safari" do
+    mock = mock_browser("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.122 Safari/534.30")
+    assert_equal false, mock.browser_is?('safari')
+  end
+
   must "correctly identify known user agents" do
     user_agents(:browsers).each do |browser|
       mock = mock_browser(browser['ua'])
