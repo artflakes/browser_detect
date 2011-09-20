@@ -18,7 +18,7 @@ module BrowserDetect
              when 'ios'
                includes?(/iphone|ipad|ipod/)
              when /^robot(s?)$/
-               includes?(/googlebot|msnbot|yahoo! slurp|baidu/)
+               includes?(/suggybot|googlebot|msnbot|yahoo! slurp|baidu/)
              when 'mobile'
                browser_is?('ios') || includes?(/android|webos|mobile/)
              else

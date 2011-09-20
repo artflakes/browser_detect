@@ -15,6 +15,12 @@ browsers:
     - ie
     - ie8
 
+- nickname: suggybot
+  ua: "Mozilla/5.0 (compatible; suggybot v0.01a, http://blog.suggy.com/was-ist-suggy/suggy-webcrawler/)"
+  name:
+    - suggybot
+    - robots
+
 - nickname: googlebot
   ua: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
   name: 

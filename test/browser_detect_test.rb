@@ -19,6 +19,11 @@ class BrowserDetectTest < Test::Unit::TestCase
     assert mock.browser_is?('robot')
   end
 
+  must "identify suggy bot" do
+    mock = mock_browser("Mozilla/5.0 (compatible; suggybot v0.01a, http://blog.suggy.com/was-ist-suggy/suggy-webcrawler/)")
+    assert mock.browser_is?('robot')
+  end
+
   must "identifies robots" do
     mock = mock_browser("Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)")
     assert mock.browser_is?('robots')
