@@ -111,3 +111,13 @@ browsers:
     - safari
     - webos
     - mobile
+    
+- nickname: "Firefox 3.6"
+  ua: "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; de; rv:1.9.2.23) Gecko/20110920 Firefox/3.6.23"
+  name:
+    - firefox
+    
+- nickname: "Firefox 7.x"
+  ua: "Mozilla/5.0 (Windows NT 5.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1"
+  name:
+    - firefox

@@ -68,12 +68,25 @@ class BrowserDetectTest < Test::Unit::TestCase
     assert(mock.browser_is?('webkit'))
     assert_equal(533.4, mock.browser_webkit_version)
   end
+  
+  must "correctly identify firefox versions 3.x" do
+    mock = mock_browser("Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; de; rv:1.9.2.23) Gecko/20110920 Firefox/3.6.23")
+    assert(mock.browser_is?('firefox'))
+    assert_equal(3.6, mock.browser_firefox_version)
+  end
+
+  must "correctly identify firefox versions 7.x" do
+    mock = mock_browser("Mozilla/5.0 (Windows NT 5.1; rv:7.0.1) Gecko/20100101 Firefox/7.0.1")
+    assert(mock.browser_is?('firefox'))
+    assert_equal(7.0, mock.browser_firefox_version)
+  end
+
 
   must "handle strange user agent strings for iOS apps" do
     mock = mock_browser("Times/(null) (iPad; http://www.acrylicapps.com/pulp/)")
     assert(mock.browser_is?('ios'))
     assert(mock.browser_is?('webkit'))
-    assert_equal(0, mock.browser_webkit_version)
+    assert_equal(0, mock.browser_firefox_version)
   end
 end
 

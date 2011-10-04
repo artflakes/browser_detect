@@ -11,6 +11,8 @@ module BrowserDetect
                includes?(/msie \d/) and not includes?('opera') and not includes?('webtv')
              when 'mozilla'
                includes?('gecko') || includes?('mozilla')
+             when 'firefox'
+               includes?('firefox')
              when 'safari'
                includes?('safari') and not includes?('chrome')
              when 'webkit'
@@ -33,6 +35,14 @@ module BrowserDetect
   def browser_webkit_version
     if browser_is? 'webkit'
       match = ua.match(%r{\bapplewebkit/([\d\.]+)\b})
+      match[1].to_f if (match)
+    end or 0
+  end
+
+  # Determine the version of firefox.
+  def browser_firefox_version
+    if browser_is? 'firefox'
+      match = ua.match(%r{\bfirefox/([\d\.]+)\b})
       match[1].to_f if (match)
     end or 0
   end
