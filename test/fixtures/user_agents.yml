@@ -34,6 +34,18 @@ browsers:
     - robots
     - robot
 
+- nickname: bingbot
+  ua: "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"
+  name:
+    - robot
+    - robots
+
+- nickname: sogou
+  ua: "Sogou web spider/4.0(+http://www.sogou.com/docs/help/webmasters.htm#07)"
+  name:
+    - robot
+    - robots
+
 - nickname: yahoobot
   ua: "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)"
   name:
